@@ -1,17 +1,17 @@
 #####################
 # Chapter 8 examples
-# ¿¹Á¦ 8.1, ¿¹Á¦ 8.2
+# ??ï¿½ï¿½ 8.1, ??ï¿½ï¿½ 8.2
 
 datadir = "http://econ.korea.ac.kr/~chirokhan/book/data"
 
 Death <- read.csv(file.path(datadir,"deathrate.csv"))
 summary(Death)
 
-# ¿ì¸®³ª¶ó ±ºº° »ç¸Á·ü ÀÚ·á
-# deathrate: »ç¸Á·ü ÀÎ±¸ 1Ãµ¸í´ç ¿¬°£ »ç¸ÁÀÚ ¼ö
-# drink: À½ÁÖÀ², ¹éºÐÀ²
+# ?ì¸®???? ???? ???ï¿½ï¿½? ?Ú·?
+# deathrate: ???ï¿½ï¿½? ?Î±? 1Ãµ???? ???? ?????? ??
+# drink: ï¿½ï¿½??ï¿½ï¿½, ????ï¿½ï¿½
 
-# Run the regression of deathrate on drink, 2010³â ÀÚ·á¸¸ ÀÌ¿ë (year==2010)
+# Run the regression of deathrate on drink, 2010?? ?Ú·á¸¸ ?Ì¿? (year==2010)
 
 
 
@@ -25,7 +25,7 @@ summary(ols1)
 
 
 
-# aged: ÇØ´ç Áö¿ª °í·ÉÀÚ ºñÀ²
+# aged: ?Ø´? ???? ?????? ??ï¿½ï¿½
 plot(drink ~ aged,data=Death)
 
 # Run the regression of deathrate on drink and aged, year 2010
@@ -40,7 +40,7 @@ summary(ols2)
 
 
 
-## ºÐÇØÁ¤¸® page 218
+## ????ï¿½ï¿½?? page 218
 ## partial out
 
 
@@ -80,7 +80,7 @@ summary(ols8)
 ols9=lm(uhat_y~uhat_x1,data=Housing)
 summary(ols9)
 ######
-# ¿¹Á¦ 8.3
+# ??ï¿½ï¿½ 8.3
 
 data(Wages1,package="Ecdat")
 summary(Wages1)
@@ -119,6 +119,8 @@ head(Wages1)
 
 summary(lm(log(wage)~female+school+exper,data=Wages1))$r.sq
 
-# R Á¦°öÀº ¾î¶² º¯¼ö°¡ Æ÷ÇÔµÇ¾îµµ Áõ°¡ÇÏ´Â °æÇâ 
+# R ï¿½ï¿½??ï¿½ï¿½ ?î¶² ?????? ???ÔµÇ¾îµµ ?????Ï´? ???? 
 summary(lm(log(wage)~female+school+exper+rnd,data=Wages1))$r.sq
+
+summary(lm(log(wage)~female+school+exper+rnd, data=Wages1))
 
